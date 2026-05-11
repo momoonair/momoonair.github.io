@@ -1,43 +1,36 @@
-
+// Gestione Scroll Reveal
 const reveals = document.querySelectorAll('.reveal');
-
 window.addEventListener('scroll', () => {
-
     reveals.forEach(reveal => {
-
         const top = reveal.getBoundingClientRect().top;
-
-        const windowHeight = window.innerHeight;
-
-        if (top < windowHeight - 100) {
-
+        if (top < window.innerHeight - 100) {
             reveal.classList.add('active');
-        }
-        else {
-
+        } else {
             reveal.classList.remove('active');
         }
+    });
+});
 
+// Gestione Animazione Hero 3D
+const heroBox = document.querySelector('.hero-box');
+const heroSection = document.querySelector('.hero');
+
+if (heroBox && heroSection) {
+    heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroBox.getBoundingClientRect();
+
+        // Centro della card
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const sensitivity = 25;
+        const rotateY = (e.clientX - centerX) / sensitivity;
+        const rotateX = (centerY - e.clientY) / sensitivity;
+
+        heroBox.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
     });
 
-});
-
-const hero = document.querySelector('.hero-box');
-const heroContainer = document.querySelector('.hero'); // Usiamo il container per una migliore area di attivazione
-
-heroContainer.addEventListener('mousemove', (e) => {
-    const rect = hero.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const sensitivity = 30;
-    // Calcolo per far sì che la card "punti" verso il mouse
-    const rotateY = (e.clientX - centerX) / sensitivity;
-    const rotateX = (centerY - e.clientY) / sensitivity;
-
-    hero.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-});
-
-heroContainer.addEventListener('mouseleave', () => {
-    hero.style.transform = `rotateY(0deg) rotateX(0deg)`;
-});
+    heroSection.addEventListener('mouseleave', () => {
+        heroBox.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+}
