@@ -434,7 +434,7 @@ nav {
 
 .overlay h3 {
     font-size: 1.7rem;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 /* =========================
@@ -457,6 +457,7 @@ nav {
     gap: 40px;
 
     align-items: start;
+    justify-content: space-between;
 }
 
 .footer-info .footer-name {
@@ -473,6 +474,10 @@ nav {
     font-size: 0.8rem;
 
     opacity: 0.6;
+}
+
+.footer-contacts {
+    text-align: center;
 }
 
 .footer-contacts h4 {
