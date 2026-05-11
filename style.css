@@ -321,6 +321,9 @@ nav {
 ========================= */
 
 .card {
+    display: flex;
+    flex-direction: column;
+
     padding: 35px;
 
     overflow: hidden;
@@ -333,6 +336,10 @@ nav {
     transition: 0.4s ease;
 }
 
+.card img {
+    margin-top: auto;
+}
+
 .card:hover {
     transform: translateY(-10px);
 
@@ -343,7 +350,6 @@ nav {
 
 .card span {
     display: inline-block;
-
     margin-bottom: 20px;
 
     color: var(--green);
@@ -357,6 +363,7 @@ nav {
 }
 
 .card p {
+
     margin-bottom: 25px;
 }
 
@@ -558,18 +565,68 @@ nav {
    RESPONSIVE
 ========================= */
 
+/* ---------- LARGE TABLET ---------- */
+
+@media (max-width: 1200px) {
+
+    .hero {
+        gap: 40px;
+    }
+
+    h1 {
+        font-size: clamp(3.8rem, 8vw, 6rem);
+    }
+
+    .hero-box {
+        max-width: 420px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+}
+
+/* ---------- TABLET ---------- */
+
 @media (max-width: 1000px) {
+
+    body {
+        padding-top: 100px;
+    }
+
+    section {
+        padding: 100px 7%;
+    }
+
+    nav {
+        padding: 20px 7%;
+    }
+
+    .menu {
+        gap: 25px;
+    }
 
     .hero {
         flex-direction: column;
+        align-items: flex-start;
+
+        min-height: auto;
+
+        gap: 50px;
+    }
+
+    .hero-text {
+        max-width: 100%;
     }
 
     .hero-box {
         max-width: 100%;
+        width: 100%;
     }
 
-    .menu {
-        display: none;
+    .cards,
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-content {
@@ -577,9 +634,12 @@ nav {
         text-align: center;
     }
 
+    .footer-contacts {
+        text-align: center;
+    }
+
     .footer-school {
         justify-content: center;
-        order: -1;
     }
 
     .school-text {
@@ -587,29 +647,195 @@ nav {
     }
 }
 
-@media (max-width: 700px) {
+/* ---------- MOBILE LARGE ---------- */
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 90px;
+    }
 
     section {
-        padding: 100px 7%;
+        padding: 80px 6%;
+    }
+
+    nav {
+        padding: 18px 6%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 
     h1 {
-        font-size: 3.2rem;
+        font-size: clamp(2.8rem, 12vw, 4.2rem);
+        line-height: 0.95;
+        letter-spacing: -2px;
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .eyebrow {
+        margin-bottom: -30px;
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+    }
+
+    .hero {
+        gap: 40px;
     }
 
     .hero-box {
         min-height: 320px;
+        border-radius: 30px;
     }
 
     .code {
-        font-size: 0.8rem;
+        padding: 30px;
+        font-size: 0.78rem;
+        line-height: 1.8;
     }
 
-    footer {
+    .cards,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .overlay {
+        padding: 28px;
+    }
+
+    .card img {
+        height: 280px;
+    }
+
+    .project {
+        height: 320px;
+    }
+
+    .overlay h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Glow Optimization */
+
+    body::before,
+    body::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    body::before {
+        top: -120px;
+        left: -120px;
+    }
+
+    body::after {
+        right: -120px;
+        bottom: -120px;
+    }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    nav {
+        padding: 16px 5%;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-box {
+        min-height: 280px;
+    }
+
+    .code {
+        padding: 24px;
+        font-size: 0.72rem;
+    }
+
+    .card,
+    .overlay {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .card h3,
+    .overlay h3 {
+        font-size: 1.35rem;
+    }
+
+    .card img {
+        height: 220px;
+        border-radius: 16px;
+    }
+
+    .project {
+        height: 280px;
+        border-radius: 24px;
+    }
+
+    .btn {
+        padding: 14px 22px;
+        font-size: 0.95rem;
+    }
+
+    .footer-school {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .school-text {
+        text-align: center;
+    }
+
+    .school-logo {
+        width: 42px;
+    }
+
+    /* Smaller Glow */
+
+    body::before,
+    body::after {
+        width: 250px;
+        height: 250px;
+        filter: blur(50px);
     }
 }
