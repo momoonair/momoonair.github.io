@@ -23,10 +23,21 @@ window.addEventListener('scroll', () => {
 });
 
 const hero = document.querySelector('.hero-box');
+const heroContainer = document.querySelector('.hero'); // Usiamo il container per una migliore area di attivazione
 
-document.addEventListener('mousemove', (e) => {
-    const x = (window.innerWidth / 2 - e.pageX) / 40;
-    const y = (window.innerHeight / 2 - e.pageY) / 40;
+heroContainer.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
 
-    hero.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+    const sensitivity = 30;
+    // Calcolo per far sì che la card "punti" verso il mouse
+    const rotateY = (e.clientX - centerX) / sensitivity;
+    const rotateX = (centerY - e.clientY) / sensitivity;
+
+    hero.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+});
+
+heroContainer.addEventListener('mouseleave', () => {
+    hero.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
