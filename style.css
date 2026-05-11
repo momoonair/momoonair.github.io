@@ -38,6 +38,7 @@ body {
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
     padding-top: 120px;
+    isolation: isolate;
 }
 
 /* Background Glow */
@@ -45,34 +46,53 @@ body {
 body::before,
 body::after {
     content: "";
+
     position: fixed;
-    width: 600px;
-    height: 600px;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
     z-index: -1;
+
+    pointer-events: none;
+
+    will-change: transform;
+
+    transform: translateZ(0);
+
+    opacity: 0.9;
 }
+
+/* Green Glow */
 
 body::before {
-    top: -200px;
-    left: -200px;
+    top: -150px;
+    left: -150px;
 
     background:
         radial-gradient(circle,
-            rgba(74, 222, 128, 0.15),
+            rgba(74, 222, 128, 0.18) 0%,
+            rgba(74, 222, 128, 0.08) 35%,
             transparent 70%);
 
-    filter: blur(80px);
+    filter: blur(60px);
 }
 
+/* Blue Glow */
+
 body::after {
-    right: -250px;
-    bottom: -250px;
+    right: -180px;
+    bottom: -180px;
 
     background:
         radial-gradient(circle,
-            rgba(96, 165, 250, 0.15),
+            rgba(96, 165, 250, 0.18) 0%,
+            rgba(96, 165, 250, 0.08) 35%,
             transparent 70%);
 
-    filter: blur(100px);
+    filter: blur(70px);
 }
 
 section {
