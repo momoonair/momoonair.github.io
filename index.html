@@ -24,79 +24,172 @@
         </div>
 
         <div class="menu">
-            <a href="#">CC</a>
-            <a href="#">CC</a>
-            <a href="#">CC</a>
+            <a href="#">Home</a>
+            <a href="#modules">Attività</a>
+            <a href="#python">Python</a>
             <a href="#">CC</a>
         </div>
     </nav>
+
 
     <section class="hero">
 
         <div class="hero-text">
             <h1>
-                SCUOLA <span class="gradient">LAVORO</span>
+                dal SOCIALE al <span class="gradient">CODICE</span>
             </h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet nulla expedita id est dolores
-                perferendis tempora at fuga blanditiis! Id veniam illo tempore iure. Itaque vero expedita aperiam
-                praesentium.
+            <p>Il mio percorso di FORMAZIONE SCUOLA-LAVORO
             </p>
 
-            <a href="#" class="btn">
+            <a href="#modules" class="btn">
                 SCOPRI
             </a>
 
         </div>
 
         <div class="hero-box">
+            <div class="code">
+                <p><span class="purple">import</span> matplotlib.pyplot <span class="purple">as</span> plt
+                    <br>
+                    <span class="purple">import</span> numpy <span class="purple">as</span> np
+                    <br><br>
+                    x,y = np.<span class="blue">genfromtxt</span> ('file.txt', <span class="green">type</span>=None,
+                    <span class="green">encoding</span>='utf-8',<span class="green">unpack</span>=True)
+                    <br><br>
+                    <span class="blue">print</span>(x,y)
+                    <br>
+                    plt.<span class="blue">scatter</span>(x,y)
+                </p>
+            </div>
 
         </div>
 
     </section>
 
-    <section class="modules">
 
-        <h2>Programma del Corso</h2>
+    <section class="modules" id="modules">
+
+        <h2>Attività Svolte</h2>
 
         <p class="section-text">
-            Un percorso completo per imparare Python
-            dalle basi fino ai progetti avanzati.
+            Queste tre attività hanno contribuito a farmi maturare come individuo, rappresentando tappe della mia
+            crescita personale.
+            <br><br>
+            È stato un percorso trasversale tra tecnologia, impegno sociale e apertura culturale, che ha
+            consolidato la mia maturità individuale e delineato la mia visione professionale.
         </p>
+
+
 
         <div class="cards">
 
-            <div class="card">
+            <div class="card reveal">
                 <span>01</span>
-                <h3>Fondamenti Python</h3>
+                <h3>Viaggio d'Istruzione</h3>
 
                 <p>
-                    Impara sintassi, variabili e logica
-                    di programmazione.
+                    Viaggio di istruzione nei campi di concentramento polacchi
                 </p>
+                <img src="https://img.static-kl.com/transform/9a224a97-45f3-4083-b5fe-46c63c637669/" alt="">
             </div>
 
-            <div class="card">
+            <div class="card reveal">
                 <span>02</span>
-                <h3>Funzioni & Moduli</h3>
+                <h3>Organizzazione "La Piazzetta"</h3>
 
                 <p>
-                    Scrivi codice riutilizzabile e professionale.
+                    Collaborazione e sensibilizzazione con ragazzi con difficoltà.
                 </p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQTJKiEJ0ZTKUHKmmcLQUsFRAnMWLiGuwYA&s"
+                    alt="">
             </div>
 
-            <div class="card">
+            <div class="card reveal" id="python_card">
                 <span>03</span>
-                <h3>API & Automazioni</h3>
+                <h3>POC Metodi
+                    matematici e
+                    analisi dati con
+                    Python</h3>
 
                 <p>
                     Costruisci automazioni e integrazioni moderne.
                 </p>
+                <img src="https://miro.medium.com/v2/resize:fit:1400/0*DypQzAMdE9cudggX" alt="">
             </div>
 
         </div>
 
     </section>
+
+    <section class="projects-section" id="python">
+
+        <h2>Programma del corso</h2>
+
+        <p class="section-text">
+            Il corso di Python mira a fornire agli studenti e alle studentesse
+            competenze di base nella programmazione, favorendo lo
+            sviluppo del pensiero logico e la comprensione dei concetti
+            fondamentali di codifica e problem solving.
+        </p>
+
+        <div class="projects">
+
+            <div class="project reveal">
+
+                <div class="overlay">
+                    <h3>Sintassi Base</h3>
+
+                    <p>
+                        Il corso ha fornito una solida padronanza della sintassi base di Python, permettendomi di
+                        padroneggiare i costrutti fondamentali del linguaggio — dalle funzioni alla gestione dei flussi
+                        logici — per tradurre algoritmi complessi in codice pulito ed efficiente.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="project reveal">
+
+                <div class="overlay">
+                    <h3>Analisi Dati</h3>
+
+                    <p>Analisi ed elaborazione di dataset complessi attraverso Pandas e NumPy, ottimizzando la gestione
+                        dei dati numerici e strutturati. Trasformazione dei dati in elementi visivi tramite Matplotlib,
+                        progettando grafici statici per uno studio efficace dei risultati."
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="project reveal">
+
+                <div class="overlay">
+                    <h3>Interfacce Grafiche</h3>
+
+                    <p>
+                        Sviluppo interfacce grafiche (GUI) interattive utilizzando Tkinter,
+                        trasformando script di calcolo in applicativi desktop completi. Il focus è stato posto sulla
+                        creazione di layout intuitivi, sulla gestione degli eventi e sull'ottimizzazione dell'esperienza
+                        utente.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p># 2026 Simone Costante</p>
+
+        <p>Formazione Scuola-Lavoro</p>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
