@@ -207,6 +207,7 @@ nav {
     font-size: 1.25rem;
     transition: transform 0.3s ease-out, border 0.4s, box-shadow 0.4s;
     will-change: transform;
+   border-radius: 20px;
 }
 
 .hero-inner {
