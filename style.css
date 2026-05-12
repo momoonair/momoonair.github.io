@@ -205,10 +205,11 @@ nav {
     height: 400px;
     perspective: 1000px;
     font-size: 1.25rem;
-    transition: transform 0.3s ease-out, border 0.4s, box-shadow 0.4s;
     will-change: transform;
     cursor: pointer;
     border-radius: 20px;
+    transition: 0.4s;
+    border: 2px solid transparent;
 }
 
 .hero-inner {
@@ -283,7 +284,7 @@ nav {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 30px;
-    transition: 0.4s ease;
+    transition: 0.3s ease;
 }
 
 .card:hover {
@@ -375,7 +376,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     overflow: hidden;
-    transition: 0.4s ease;
+    transition: 0.3s ease;
 }
 
 .valutation:hover {
