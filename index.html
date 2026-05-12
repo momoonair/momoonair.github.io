@@ -50,21 +50,35 @@
 
         </div>
 
-        <div class="hero-box">
-            <div class="code">
-                <p><span class="purple">import</span> matplotlib.pyplot <span class="purple">as</span> plt
-                    <br>
-                    <span class="purple">import</span> numpy <span class="purple">as</span> np
-                    <br><br>
-                    x,y = np.<span class="blue">genfromtxt</span> ('file.txt', <span class="green">dtype</span>=None,
-                    <span class="green">encoding</span>='utf-8',<span class="green">unpack</span>=True)
-                    <br><br>
-                    <span class="blue">print</span>(x,y)
-                    <br>
-                    plt.<span class="blue">scatter</span>(x,y)
-                </p>
-            </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+        <div class="hero-box" id="heroBox">
+
+            <div class="hero-inner">
+
+                <!-- FRONT -->
+                <div class="hero-face hero-front">
+                    <div class="code">
+                        <span class="purple">import</span> matplotlib.pyplot <span class="purple">as</span> plt
+                        <br>
+                        <span class="purple">import</span> numpy <span class="purple">as</span> np
+                        <br>
+
+                        x, y = np.<span class="blue">genfromtxt</span>(<span class="green">'file.txt'</span>, <span
+                            class="green">dtype</span>=None)
+                        <br>
+                        plt.<span class="blue">scatter</span>(x, y)
+                        <br>
+                        plt.<span class="blue">show</span>()
+                    </div>
+                </div>
+
+                <!-- BACK -->
+                <div class="hero-face hero-back">
+                    <canvas id="chart"></canvas>
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -210,7 +224,8 @@
                 <br><br>
 
                 Oltre alle competenze tecniche, questa esperienza mi ha permesso di sviluppare importanti
-                <span class="blue">competenze trasversali</span>, fondamentali sia nel percorso scolastico sia in quello
+                <span class="green">competenze trasversali</span>, fondamentali sia nel percorso scolastico sia in
+                quello
                 professionale. Ho migliorato la mia capacità di problem solving, imparando ad affrontare gli errori con
                 metodo e spirito critico, trasformandoli in occasioni di crescita e apprendimento.
                 Il corso mi ha inoltre aiutato a sviluppare maggiore autonomia, organizzazione del lavoro e capacità di
@@ -220,7 +235,7 @@
 
                 <br><br>
 
-                L'aspetto più importante è stato però <span class="blue">personale</span>:
+                L'aspetto più importante è stato però <span class="green">personale</span>:
                 mi ha fatto capire quanto il mondo dell'informatica rispecchi realmente i miei interessi
                 e le mie attitudini, e ho compreso che desidero continuare il mio percorso di studi e il mio futuro
                 professionale nell'ambito tecnologico e informatico.
