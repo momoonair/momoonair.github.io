@@ -117,6 +117,7 @@ body::after {
     filter: blur(70px);
 }
 
+
 /* =========================
    NAVBAR
 ========================= */
@@ -210,6 +211,7 @@ nav {
     border-radius: 20px;
     transition: 0.4s;
     border: 2px solid transparent;
+
     overflow: hidden;
 }
 
@@ -219,6 +221,7 @@ nav {
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
+
 }
 
 .hero-box.is-flipped .hero-inner {
@@ -288,10 +291,15 @@ nav {
     transition: 0.3s ease;
 }
 
+
 .card:hover {
     transform: translateY(-10px) !important;
     border-color: rgba(74, 222, 128, 0.3);
     box-shadow: 0 20px 40px #4ade803b;
+}
+
+.card p {
+    margin-bottom: 2rem;
 }
 
 .card span {
