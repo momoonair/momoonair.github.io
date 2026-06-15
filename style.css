@@ -300,6 +300,7 @@ nav {
 
 .card p {
     margin-bottom: 2rem;
+    margin-top: auto;
 }
 
 .card span {
